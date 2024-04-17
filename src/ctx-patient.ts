@@ -1,24 +1,27 @@
 import {HumanName} from "fhir/r4";
-import {WbResource} from "./wb-resource";
-import {WbFlag} from "./wb-flag";
+import {CtxResource} from "./ctx-resource";
 
 /**
- * The WbPatient resource contains data that are associated with the specific patient
+ * The Patient resource contains data that are associated with the specific patient
  */
-export interface WbPatient extends WbResource {
-  wbResourceType: "WbPatient"
+export interface CtxPatient extends CtxResource {
+  resourceType: "CtxPatient"
   identifier: string
   name: HumanName
   gender?: ('male' | 'female' | 'other' | 'unknown')
   birthDate?: Date
-  flags: WbFlag[]
-  // unitSpecificData?: any
+
+  diagnoses?: {
+    condition: string
+    use?: 'primary' | 'admission' | 'working' | null
+  }[]
 
   // isNameAlert: boolean,
   // isUpcomingDischarge: boolean,
   // bedsideRN: string | null,
   // transferOfInterest: boolean,
   // adultPatient: boolean,
+
   // clinicalData: {
   //   diagnosis: string | null,
   //   isDialysis: boolean,
@@ -68,13 +71,5 @@ export interface WbPatient extends WbResource {
   //   ecmoStandby: boolean,
   //   comboProcedure: boolean,
   // },
-  // admissionData: {
-  //   initialContactDate: Date | null,
-  //   sourceLocationName: string | null,
-  //   transferAcuity: 'urgent' | 'emergent' | null,
-  //   insuranceApprovalStatus: InsuranceApprovalStatus | null,
-  //   expectedAdmissionDate: Date | null,
-  //   admissionNotes: string | null,
-  //   admissionDiagnosis: string | null,
-  // }
+
 }

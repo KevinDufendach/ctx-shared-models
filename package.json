@@ -1,7 +1,7 @@
 {
-  "name": "@kevindufendach/wb-shared-models",
+  "name": "@kevindufendach/ctx-shared-models",
   "version": "1.0.85",
-  "description": "Shared models for the Whiteboard Application",
+  "description": "Shared models for the CareTrax Application",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +12,6 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {
-    "@types/fhir": "^0.0.37"
-  },
   "devDependencies": {
     "typescript": "^5.0.4"
   },
@@ -24,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dufendach-lab/whiteboard-v2-shared.git"
+    "url": "git+https://github.com/KevinDufendach/ctx-shared-models.git"
   },
   "bugs": {
-    "url": "https://github.com/dufendach-lab/whiteboard-v2-shared/issues"
+    "url": "https://github.com/KevinDufendach/ctx-shared-models/issues"
   },
-  "homepage": "https://github.com/dufendach-lab/whiteboard-v2-shared#readme"
+  "homepage": "https://github.com/KevinDufendach/ctx-shared-models#readme"
 }
