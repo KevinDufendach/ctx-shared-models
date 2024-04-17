@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/KevinDufendach/ctx-shared-models/issues"
   },
-  "homepage": "https://github.com/KevinDufendach/ctx-shared-models#readme"
+  "homepage": "https://github.com/KevinDufendach/ctx-shared-models#readme",
+  "dependencies": {
+    "fhir": "^4.12.0"
+  }
 }
