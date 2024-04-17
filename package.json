@@ -1,6 +1,6 @@
 {
   "name": "@kevindufendach/ctx-shared-models",
-  "version": "1.0.87",
+  "version": "1.0.88",
   "description": "Shared models for the CareTrax Application",
   "main": "lib/index.js",
   "scripts": {
