@@ -13,6 +13,7 @@
     "lib/**/*"
   ],
   "devDependencies": {
+    "@types/fhir": "^0.0.41",
     "typescript": "^5.0.4"
   },
   "types": "./lib/index.d.ts",

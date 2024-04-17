@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@types/fhir@^0.0.37":
-  version "0.0.37"
-  resolved "https://registry.yarnpkg.com/@types/fhir/-/fhir-0.0.37.tgz#54835d905009b34360437ba014564299c530253c"
-  integrity sha512-fR1y6tPfDmxYDWN4JkJhuI5F5QpbaFVSoNo3pu9A6nzuoojANqg0UBnNZTVegTz/MilV3PSjyvFe6/vO55geKA==
+"@types/fhir@^0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@types/fhir/-/fhir-0.0.41.tgz#c5215e2fda46d694111cdd36e12fd8124a3f12d6"
+  integrity sha512-MAQAFufNZBZ6V0F94Nhknmmh/E3iMXFK4n/L8RkSNjKtOJnvaAJERivNOj35VVx9VCQBJbE0BHSzikfBahoRhA==
 
 typescript@^5.0.4:
   version "5.0.4"
