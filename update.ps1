@@ -6,10 +6,14 @@ git push
 
 #npx tsc
 cd ../caretrax/frontend
+Write-Host "Updating frontend"
+pwd
 yarn upgrade wb-shared-models
 Write-Host "Frontend updated successfully"
 
 cd ../api
+Write-Host "Updating API"
+pwd
 yarn upgrade wb-shared-models
 Write-Host "API updated successfully"
 
