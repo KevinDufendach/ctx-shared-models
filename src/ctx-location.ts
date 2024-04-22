@@ -13,6 +13,6 @@ export interface CtxLocation extends CtxResource {
     occupant?: string | null
     futureOccupants?: string[]
 
-    partOf?: string // ID of another location this is physically a part of
+    partOf?: string | null // ID of another location this is physically a part of
     characteristics?: CodeableConcept[]
 }
