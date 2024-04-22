@@ -22,7 +22,7 @@ export interface CtxResource {
   /**
    * Version should increment with each change of the resource
    */
-  version: number
+  // version: number
   identifier?: string
   extension?: Extension[]
   data?: {[key in string]: any}
