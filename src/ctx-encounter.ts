@@ -35,8 +35,10 @@ export interface CtxEncounter extends CtxResource {
     use?: CodeableConcept
   };
   subjectId: string; // ID of the patient subject
-  activeLocationId: string; // ID of the currently active location
-  pendingLocationsId: string[]; // Ids of pending/future locations
+
+  // activeLocationId: string | null; // ID of the currently active location
+  // pendingLocationsId: string[]; // Ids of pending/future locations
+
   locations: {
     locationId: string,
     status: 'planned' | 'active' | 'reserved' | 'completed',
