@@ -6,7 +6,7 @@ import {CtxResource} from "./ctx-resource";
  */
 export interface CtxPatient extends CtxResource {
   resourceType: "CtxPatient"
-  identifier: string
+  // identifier: string
   name: HumanName
   gender?: ('male' | 'female' | 'other' | 'unknown')
   birthDate?: Date

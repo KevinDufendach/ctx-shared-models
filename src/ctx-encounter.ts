@@ -1,5 +1,6 @@
 import {CodeableConcept, Period} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
+import {CtxProcedure} from "./ctx-procedure";
 
 export type ApprovalStatus = 'approved' | 'denied' | 'pending' | 'unnecessary'
 
@@ -41,6 +42,8 @@ export interface CtxEncounter extends CtxResource {
     status: 'planned' | 'active' | 'reserved' | 'completed',
     period: Period
   }[]
+
+  procedures?: CtxProcedure[]
 
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge
