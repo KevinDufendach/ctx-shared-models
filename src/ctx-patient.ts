@@ -1,4 +1,4 @@
-import {HumanName} from "fhir/r4";
+import {HumanName, Period} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
 
 /**
@@ -15,6 +15,12 @@ export interface CtxPatient extends CtxResource {
     condition: string
     use?: 'primary' | 'admission' | 'working' | null
   }[]
+  //
+  // careTeam?: [{
+  //   role: string
+  //   participantId: string
+  //   period: Period
+  // }]
 
   // isNameAlert: boolean,
   // isUpcomingDischarge: boolean,

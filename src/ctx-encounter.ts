@@ -50,6 +50,10 @@ export interface CtxEncounter extends CtxResource {
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge
 
-  // Compiled data
-  careTeam?: string;
+  careTeam?: [{
+    participantId: string
+    status: 'planned' | 'active' | 'completed'
+    role: string
+    period: Period
+  }]
 }
