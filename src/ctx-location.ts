@@ -10,8 +10,8 @@ export interface CtxLocation extends CtxResource {
     operationalStatus?: 'occupied' | 'unoccupied' | 'leaving' | 'closed' | 'housekeeping' | 'reserved' | 'contaminated' | 'isolated'
     operationalStatusText?: string
 
-    occupant?: string | null
-    futureOccupants?: string[]
+    activeEncounterId?: string | null
+    futureEncounterId?: string[]
 
     partOf?: string | null // ID of another location this is physically a part of
     characteristics?: CodeableConcept[]
