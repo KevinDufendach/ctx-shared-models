@@ -1,7 +1,7 @@
 import {CtxResource} from "./ctx-resource";
 import {CodeableConcept} from "fhir/r4";
 
-export type OperationalStatus = 'occupied' | 'unoccupied' | 'leaving' | 'closed' | 'housekeeping' | 'reserved' | 'contaminated' | 'isolated'
+export type OperationalStatus = 'unoccupied' | 'occupied' | 'leaving' | 'arriving' | 'closed' | 'housekeeping' | 'reserved' | 'contaminated' | 'isolated'
 
 export interface CtxLocation extends CtxResource {
     resourceType: "CtxLocation"
