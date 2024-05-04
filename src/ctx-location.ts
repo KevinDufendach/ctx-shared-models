@@ -9,8 +9,8 @@ export interface CtxLocation extends CtxResource {
     identifier: string
     physicalType: 'si' | 'bu' | 'wa' | 'ro' | 'bd' | 'ho'
 
-    operationalStatus?: OperationalStatus
-    operationalStatusText?: string
+    operationalStatus: OperationalStatus
+    // operationalStatusText?: string
 
     activeEncounterId?: string | null
     futureEncounterId?: string[]
