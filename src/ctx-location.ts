@@ -1,5 +1,5 @@
 import {CtxResource} from "./ctx-resource";
-import {CodeableConcept} from "fhir/r4";
+import {CodeableConcept, Period} from "fhir/r4";
 
 export type OperationalStatus =
   'unoccupied'
@@ -16,7 +16,8 @@ export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
 
 export interface LocationEncounter {
   encounterId: string,
-  status: LocationStatus
+  status: LocationStatus,
+  period: Period
 }
 
 export interface CtxLocation extends CtxResource {
