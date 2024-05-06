@@ -25,6 +25,8 @@ export interface CtxEncounterDischarge {
   data?: {[key in string]: any}
 }
 
+export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
+
 export interface CtxEncounter extends CtxResource {
   resourceType: "CtxEncounter"
   status: 'planned'|'arrived'|'triaged'|'in-progress'|'onleave'|'finished'|'cancelled'|'entered-in-error'|'unknown';
@@ -41,7 +43,7 @@ export interface CtxEncounter extends CtxResource {
 
   locations: {
     locationId: string,
-    status: 'planned' | 'active' | 'reserved' | 'completed',
+    status: LocationStatus,
     period: Period
   }[]
 
