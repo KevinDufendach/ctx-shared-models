@@ -30,7 +30,7 @@ export interface CtxLocation extends CtxResource {
   // operationalStatusText?: string
 
   // activeEncounterId?: string | null
-  locationEncounters?: LocationEncounter[]
+  // locationEncounters?: LocationEncounter[]
 
   partOf?: string | null // ID of another location this is physically a part of
   characteristics?: CodeableConcept[]
