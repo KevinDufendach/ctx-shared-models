@@ -12,13 +12,13 @@ export type OperationalStatus =
   | 'contaminated'
   | 'isolated'
 
-export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
-
-export interface LocationEncounter {
-  encounterId: string,
-  status: LocationStatus,
-  period: Period
-}
+// export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
+//
+// export interface LocationEncounter {
+//   encounterId: string,
+//   status: LocationStatus,
+//   period: Period
+// }
 
 export interface CtxLocation extends CtxResource {
   resourceType: "CtxLocation"
