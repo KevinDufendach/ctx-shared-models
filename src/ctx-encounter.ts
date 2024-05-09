@@ -1,6 +1,7 @@
 import {CodeableConcept, Period} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
 import {CtxProcedure} from "./ctx-procedure";
+import {LocationStatus} from "./room-assignment";
 
 export type ApprovalStatus = 'approved' | 'denied' | 'pending' | 'unnecessary'
 
@@ -24,8 +25,6 @@ export interface CtxEncounterDischarge {
   notes?: string
   data?: {[key in string]: any}
 }
-
-export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
 
 export interface CtxEncounter extends CtxResource {
   resourceType: "CtxEncounter"

@@ -1,14 +1,12 @@
-import {LocationStatus} from "./ctx-encounter";
 import {Period} from "fhir/r4";
 
-export interface LocationEncounter {
+export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
+
+export interface RoomAssignment {
+  docId: string
+  locationId: string
   encounterId: string
   subjectId: string
   status: LocationStatus
   period: Period
-}
-
-export interface RoomAssignment {
-  location: string,
-  encounters: LocationEncounter[]
 }
