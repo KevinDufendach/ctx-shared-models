@@ -1,5 +1,6 @@
 import {CtxResource} from "./ctx-resource";
 import {CodeableConcept, Period} from "fhir/r4";
+import {LocationEncounter} from "./room-assignment";
 
 export type OperationalStatus =
   'unoccupied'
@@ -30,7 +31,7 @@ export interface CtxLocation extends CtxResource {
   // operationalStatusText?: string
 
   // activeEncounterId?: string | null
-  // locationEncounters?: LocationEncounter[]
+  encounters?: LocationEncounter[]
 
   partOf?: string | null // ID of another location this is physically a part of
   characteristics?: CodeableConcept[]
