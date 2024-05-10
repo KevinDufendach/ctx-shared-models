@@ -20,7 +20,7 @@ export type OperationalStatus =
 //   period: Period
 // }
 
-export interface CtxLocation<T> extends CtxResource<T> {
+export interface CtxLocation extends CtxResource {
   resourceType: "location"
   name: string
   identifier: string

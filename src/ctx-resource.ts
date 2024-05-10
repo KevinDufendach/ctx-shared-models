@@ -16,7 +16,7 @@ export type CtxResourceType = (
   'room-assignment' |
   'bundle')
 
-export interface CtxResource<T> {
+export interface CtxResource {
   resourceType: CtxResourceType,
   docId: string,
 
@@ -26,5 +26,5 @@ export interface CtxResource<T> {
   // version: number
   identifier?: string
   extension?: Extension[]
-  data?: T
+  data?: {[key in string]: any}
 }

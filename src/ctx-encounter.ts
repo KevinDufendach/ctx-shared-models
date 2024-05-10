@@ -26,7 +26,7 @@ export interface CtxEncounterDischarge {
   data?: {[key in string]: any}
 }
 
-export interface CtxEncounter<T> extends CtxResource<T> {
+export interface CtxEncounter extends CtxResource {
   resourceType: "encounter"
   status: 'planned'|'arrived'|'triaged'|'in-progress'|'onleave'|'finished'|'cancelled'|'entered-in-error'|'unknown';
   period?: Period;

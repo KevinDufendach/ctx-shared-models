@@ -1,7 +1,7 @@
 import {CtxResource} from "./ctx-resource";
 import {CodeableConcept, Period} from "fhir/r4";
 
-export interface CtxCareTeam<T> extends CtxResource<T> {
+export interface CtxCareTeam extends CtxResource {
   resourceType: "care-team",
   identifier: string, // Mandatory // External Ids for this item
   name: string, // Name of the team, such as crisis assessment team

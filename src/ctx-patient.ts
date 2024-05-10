@@ -4,7 +4,7 @@ import {CtxResource} from "./ctx-resource";
 /**
  * The Patient resource contains data that are associated with the specific patient
  */
-export interface CtxPatient<T> extends CtxResource<T> {
+export interface CtxPatient extends CtxResource {
   resourceType: "patient"
   // identifier: string
   name: HumanName
