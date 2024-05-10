@@ -1,6 +1,5 @@
 import {CtxResource} from "./ctx-resource";
-import {CodeableConcept, Period} from "fhir/r4";
-import {LocationEncounter} from "./room-assignment";
+import {CodeableConcept} from "fhir/r4";
 
 export type OperationalStatus =
   'unoccupied'
