@@ -13,6 +13,7 @@ export type CtxResourceType = (
   'CtxAppointment' |
   'CtxCondition' |
   'CtxObservation' |
+  'CtxRoomAssignment' |
   'CtxBundle')
 
 export interface CtxResource {
