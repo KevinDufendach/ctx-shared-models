@@ -3,8 +3,8 @@ import {CtxResource} from "./ctx-resource";
 
 export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
 
-export interface CtxRoomAssignment extends CtxResource {
-  resourceType: 'CtxRoomAssignment'
+export interface CtxRoomAssignment<T> extends CtxResource<T> {
+  resourceType: 'room-assignment'
   locationId: string
   encounterId: string
   subjectId: string

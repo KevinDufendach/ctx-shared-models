@@ -1,7 +1,7 @@
 import {CtxResource} from "./ctx-resource";
 
-export interface CtxProcedure extends CtxResource {
-  resourceType: "CtxProcedure",
+export interface CtxProcedure<T> extends CtxResource<T> {
+  resourceType: "procedure",
   status: "draft" | "in-progress" | "preparation" | "not-done" | "on-hold" | "stopped" | "completed" | "entered-in-error" | null,
 
   subject: string | null

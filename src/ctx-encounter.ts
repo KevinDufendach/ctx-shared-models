@@ -26,8 +26,8 @@ export interface CtxEncounterDischarge {
   data?: {[key in string]: any}
 }
 
-export interface CtxEncounter extends CtxResource {
-  resourceType: "CtxEncounter"
+export interface CtxEncounter<T> extends CtxResource<T> {
+  resourceType: "encounter"
   status: 'planned'|'arrived'|'triaged'|'in-progress'|'onleave'|'finished'|'cancelled'|'entered-in-error'|'unknown';
   period?: Period;
   diagnosis?: {
@@ -36,17 +36,6 @@ export interface CtxEncounter extends CtxResource {
     use?: CodeableConcept
   };
   subjectId: string; // ID of the patient subject
-
-  // activeLocationId: string | null; // ID of the currently active location
-  // pendingLocationsId: string[]; // Ids of pending/future locations
-
-  locations: {
-    locationId: string,
-    status: LocationStatus,
-    period: Period
-  }[]
-
-  procedures?: CtxProcedure[]
 
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge

@@ -1,22 +1,22 @@
 import {Extension} from "fhir/r4";
 
 export type CtxResourceType = (
-  'CtxPatient' |
-  'CtxEncounter' |
-  'CtxLocation' |
-  'CtxList' |
-  'CtxProcedure' |
-  'CtxFlag' |
-  'CtxOrganization' |
-  'CtxCareTeam' |
-  'CtxPractitioner' |
-  'CtxAppointment' |
-  'CtxCondition' |
-  'CtxObservation' |
-  'CtxRoomAssignment' |
-  'CtxBundle')
+  'patient' |
+  'encounter' |
+  'location' |
+  'list' |
+  'procedure' |
+  'flag' |
+  'organization' |
+  'care-team' |
+  'practitioner' |
+  'appointment' |
+  'condition' |
+  'observation' |
+  'room-assignment' |
+  'bundle')
 
-export interface CtxResource {
+export interface CtxResource<T> {
   resourceType: CtxResourceType,
   docId: string,
 
@@ -26,5 +26,5 @@ export interface CtxResource {
   // version: number
   identifier?: string
   extension?: Extension[]
-  data?: {[key in string]: any}
+  data?: T
 }

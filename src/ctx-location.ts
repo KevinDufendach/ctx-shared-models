@@ -20,8 +20,8 @@ export type OperationalStatus =
 //   period: Period
 // }
 
-export interface CtxLocation extends CtxResource {
-  resourceType: "CtxLocation"
+export interface CtxLocation<T> extends CtxResource<T> {
+  resourceType: "location"
   name: string
   identifier: string
   physicalType: 'si' | 'bu' | 'wa' | 'ro' | 'bd' | 'ho'
