@@ -1,5 +1,6 @@
 import {CtxResource} from "./ctx-resource";
-import {CodeableConcept, Period} from "fhir/r4";
+import {CodeableConcept} from "fhir/r4";
+import {CtxPeriod} from "./shared/ctx-period";
 
 export interface CtxCareTeam extends CtxResource {
   resourceType: "care-team",
@@ -10,6 +11,6 @@ export interface CtxCareTeam extends CtxResource {
   participant: { // C? Members of the team
     role?: CodeableConcept[], // Type of involvement
     member: string // { Reference(Practitioner|PractitionerRole|RelatedPerson|Patient|Organization|CareTeam) }, // Who is involved
-    period: Period // Time period of participant
+    period: CtxPeriod // Time period of participant
   }[],
 }

@@ -1,4 +1,4 @@
-import {HumanName, Period} from "fhir/r4";
+import {HumanName} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
 
 /**

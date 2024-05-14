@@ -1,7 +1,6 @@
-import {CodeableConcept, Period} from "fhir/r4";
+import {CodeableConcept} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
-import {CtxProcedure} from "./ctx-procedure";
-import {LocationStatus} from "./room-assignment";
+import {CtxPeriod} from "./shared/ctx-period";
 
 export type ApprovalStatus = 'approved' | 'denied' | 'pending' | 'unnecessary'
 
@@ -29,7 +28,7 @@ export interface CtxEncounterDischarge {
 export interface CtxEncounter extends CtxResource {
   resourceType: "encounter"
   status: 'planned'|'arrived'|'triaged'|'in-progress'|'onleave'|'finished'|'cancelled'|'entered-in-error'|'unknown';
-  period?: Period;
+  period?: CtxPeriod;
   diagnosis?: {
     condition: string,
     rank?: number,
@@ -44,6 +43,6 @@ export interface CtxEncounter extends CtxResource {
     participantId: string
     status: 'planned' | 'active' | 'completed'
     role: string
-    period: Period
+    period: CtxPeriod
   }]
 }
