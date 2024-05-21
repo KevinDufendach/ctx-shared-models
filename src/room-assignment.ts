@@ -2,13 +2,14 @@ import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
 import {OperationalStatus} from "./ctx-location";
 
-export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed';
+export type LocationStatus = 'planned' | 'active' | 'reserved' | 'completed' | 'leaving';
 
 export const LocationStatusMap: ({[key in LocationStatus]: OperationalStatus}) = {
   planned: 'arriving',
   active: 'occupied',
+  leaving: 'leaving',
   reserved: 'reserved',
-  completed: 'unoccupied'
+  completed: 'unoccupied',
 }
 
 export interface CtxRoomAssignment extends CtxResource {
