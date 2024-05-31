@@ -26,5 +26,6 @@ export interface CtxResource {
   // version: number
   identifier?: string
   extension?: Extension[]
-  data?: {[key in string]: any}
+  data?: any
+  // data?: {[key in string]: any}
 }
