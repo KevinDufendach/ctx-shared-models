@@ -25,6 +25,14 @@ export interface CtxEncounterDischarge {
   data?: {[key in string]: any}
 }
 
+export interface CtxEncounterCareTeam {
+  teamId: string
+  group?: string
+  role?: string
+  status: 'planned' | 'active' | 'completed'
+  period?: CtxPeriod
+}
+
 export interface CtxEncounter extends CtxResource {
   resourceType: "encounter"
   status: 'planned'|'arrived'|'triaged'|'in-progress'|'onleave'|'finished'|'cancelled'|'entered-in-error'|'unknown';
@@ -39,11 +47,5 @@ export interface CtxEncounter extends CtxResource {
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge
 
-  careTeams?: {
-    teamId: string
-    group?: string
-    role?: string
-    status: 'planned' | 'active' | 'completed'
-    period?: CtxPeriod
-  }[]
+  careTeams?: CtxEncounterCareTeam[]
 }
