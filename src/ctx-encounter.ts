@@ -39,10 +39,11 @@ export interface CtxEncounter extends CtxResource {
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge
 
-  careTeam?: [{
-    participantId: string
+  careTeams?: {
+    teamId: string
+    group?: string
+    role?: string
     status: 'planned' | 'active' | 'completed'
-    role: string
-    period: CtxPeriod
-  }]
+    period?: CtxPeriod
+  }[]
 }
