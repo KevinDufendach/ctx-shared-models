@@ -19,6 +19,7 @@ export interface CtxRoomAssignment extends CtxResource {
   locationId: string
   encounterId: string
   subjectId: string
+  careTeamId: string | null
   status: LocationStatus
   period: CtxPeriod
 }
