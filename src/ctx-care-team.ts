@@ -17,7 +17,7 @@ export interface CtxCareTeam extends CtxResource {
   participants: { // Members of the team
     practitionerId?: string // Reference to a practitioner ID if known
     displayName?: string // String display name, can be used in place of practitionerId
-    role?: string // Role of the participant
+    role: string // Role of the participant
     period?: CtxPeriod // Time period of participant
   }[],
 }
