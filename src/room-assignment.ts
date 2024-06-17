@@ -23,15 +23,6 @@ export const LocationStatusMap: ({[key in LocationStatus]: OperationalStatus}) =
   canceled: 'unoccupied'
 }
 
-
-export interface EncounterCareTeam {
-  teamId: string
-  group?: string
-  role?: string
-  status: 'planned' | 'active' | 'completed'
-  period?: CtxPeriod
-}
-
 export interface CtxRoomAssignment extends CtxResource {
   resourceType: 'room-assignment'
   locationId: string
