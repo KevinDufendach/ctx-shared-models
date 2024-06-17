@@ -1,17 +1,6 @@
 import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
-// import {OperationalStatus} from "./ctx-location";
 import {LocationStatus} from "./ctx-encounter";
-
-// export const LocationStatusMap: ({[key in LocationStatus]: OperationalStatus}) = {
-//   planned: 'arriving',
-//   confirmed: 'arriving',
-//   active: 'occupied',
-//   leaving: 'leaving',
-//   reserved: 'reserved',
-//   completed: 'unoccupied',
-//   canceled: 'unoccupied'
-// }
 
 export interface EncounterCareTeam {
   teamId: string
