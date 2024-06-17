@@ -25,23 +25,23 @@ export interface CtxEncounterDischarge {
   data?: {[key in string]: any}
 }
 
-// export interface EncounterCareTeam {
-//   teamId: string
-//   group?: string
-//   role?: string
-//   status: 'planned' | 'active' | 'completed'
-//   period?: CtxPeriod
-// }
+export interface EncounterCareTeam {
+  teamId: string
+  group?: string
+  role?: string
+  status: 'planned' | 'active' | 'completed'
+  period?: CtxPeriod
+}
 
+export type LocationStatus = 'planned' | 'confirmed' | 'active' | 'reserved' | 'completed' | 'leaving' | 'canceled'
 
-
-// export interface EncounterLocation {
-//   locationId: string | null
-//   display: string
-//   status: LocationStatus
-//   form: 'bed' | 'ward' | 'external' | 'home'
-//   period: CtxPeriod
-// }
+export interface EncounterLocation {
+  locationId: string | null
+  display: string
+  status: LocationStatus
+  form: 'bed' | 'ward' | 'external' | 'home'
+  period: CtxPeriod
+}
 
 export interface CtxEncounter extends CtxResource {
   resourceType: "encounter"
@@ -57,6 +57,6 @@ export interface CtxEncounter extends CtxResource {
   admissionData: CtxEncounterAdmission
   dischargeData: CtxEncounterDischarge
 
-  // careTeams: EncounterCareTeam[]
-  // locations: EncounterLocation[]
+  careTeams: EncounterCareTeam[]
+  locations: EncounterLocation[]
 }

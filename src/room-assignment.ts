@@ -1,8 +1,6 @@
 import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
-// import {LocationStatus} from "./ctx-encounter";
-
-export type LocationStatus = 'planned' | 'confirmed' | 'active' | 'reserved' | 'completed' | 'leaving' | 'canceled'
+import {LocationStatus} from "./ctx-encounter";
 
 export type OperationalStatus =
   'unoccupied'
