@@ -7,7 +7,7 @@ export interface RGB {
   b: number
 }
 
-interface CtxCareTeamParticipant { // Members of the team
+export interface CtxCareTeamParticipant { // Members of the team
   practitionerId?: string // Reference to a practitioner ID if known
   displayName?: string // String display name, can be used in place of practitionerId
   role: string // Role of the participant
