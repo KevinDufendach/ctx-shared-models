@@ -1,6 +1,8 @@
 import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
-import {LocationStatus} from "./ctx-encounter";
+// import {LocationStatus} from "./ctx-encounter";
+
+export type LocationStatus = 'planned' | 'confirmed' | 'active' | 'reserved' | 'completed' | 'leaving' | 'canceled'
 
 export type OperationalStatus =
   'unoccupied'
@@ -28,8 +30,8 @@ export interface CtxRoomAssignment extends CtxResource {
   locationId: string
   encounterId: string
   subjectId: string
-  // careTeams: string[]
-  // unitId: string | null
+  careTeams: string[]
+  unitId: string | null
   status: LocationStatus
   period: CtxPeriod
 }
