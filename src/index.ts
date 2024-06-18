@@ -13,3 +13,5 @@ export * from "./ctx-procedure";
 export * from "./constants/constants";
 
 export * from "./room-assignment";
+
+export * from './util'
