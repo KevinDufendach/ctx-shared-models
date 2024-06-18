@@ -36,7 +36,7 @@ export interface EncounterCareTeam {
 export type LocationStatus = 'planned' | 'confirmed' | 'active' | 'reserved' | 'completed' | 'leaving' | 'canceled'
 
 export interface EncounterLocation {
-  locationId: string | null
+  locationId: string
   display: string
   status: LocationStatus
   form: 'bed' | 'ward' | 'external' | 'home'
