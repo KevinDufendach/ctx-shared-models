@@ -37,10 +37,10 @@ export type LocationStatus = 'planned' | 'confirmed' | 'active' | 'reserved' | '
 
 export interface EncounterLocation {
   locationId: string
-  display: string
   status: LocationStatus
-  form: 'bed' | 'ward' | 'external' | 'home'
   period: CtxPeriod
+  info?: string
+  form?: 'bed' | 'ward' | 'external' | 'home'
 }
 
 export interface CtxEncounter extends CtxResource {
