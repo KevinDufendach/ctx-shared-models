@@ -9,6 +9,7 @@
   },
   "author": "Kevin Dufendach",
   "license": "ISC",
+  "type": "module",
   "files": [
     "lib/**/*"
   ],
