@@ -1,4 +1,3 @@
-import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
 import {LocationStatus} from "./ctx-encounter";
 
@@ -23,13 +22,12 @@ export const LocationStatusMap: ({[key in LocationStatus]: OperationalStatus}) =
   canceled: 'unoccupied'
 }
 
-export interface CtxRoomAssignment extends CtxResource {
+export interface CtxRoomAssignment {
   resourceType: 'room-assignment'
   locationId: string
   encounterId: string
   subjectId: string
   careTeams: string[]
-  // unitId: string | null
   status: LocationStatus
   period: CtxPeriod
 }
