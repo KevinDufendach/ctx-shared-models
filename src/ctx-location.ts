@@ -1,5 +1,5 @@
 import {CtxResource} from "./ctx-resource";
-import {CodeableConcept} from "fhir/r4";
+import {CtxCoding} from "./shared/ctx-coding";
 
 export interface CtxLocation extends CtxResource {
   resourceType: "location"
@@ -14,5 +14,5 @@ export interface CtxLocation extends CtxResource {
   // encounters?: LocationEncounter[]
 
   partOf?: string | null // ID of another location this is physically a part of
-  characteristics?: CodeableConcept[]
+  characteristics?: CtxCoding[]
 }

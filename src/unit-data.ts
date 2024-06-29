@@ -1,10 +1,8 @@
-import {Coding} from "fhir/r4";
-
-export const OrganizationalTeamCode: Coding = {
-  system: 'http://terminology.hl7.org/CodeSystem/organization-type',
-  code: 'team',
-  display: 'Organizational team'
-}
+// export const OrganizationalTeamCode: Coding = {
+//   system: 'http://terminology.hl7.org/CodeSystem/organization-type',
+//   code: 'team',
+//   display: 'Organizational team'
+// }
 
 export interface ServiceTeam {
   identifier: string,

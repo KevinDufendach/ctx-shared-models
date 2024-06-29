@@ -1,5 +1,5 @@
-import {HumanName} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
+import {CtxHumanName} from "./shared/ctx-human-name";
 
 /**
  * The Patient resource contains data that are associated with the specific patient
@@ -7,7 +7,7 @@ import {CtxResource} from "./ctx-resource";
 export interface CtxPatient<T> extends CtxResource {
   resourceType: "patient"
   // identifier: string
-  name: HumanName
+  name: CtxHumanName
   gender?: ('male' | 'female' | 'other' | 'unknown')
   birthDate?: Date
 

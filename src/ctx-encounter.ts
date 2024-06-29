@@ -1,6 +1,6 @@
-import {CodeableConcept} from "fhir/r4";
 import {CtxResource} from "./ctx-resource";
 import {CtxPeriod} from "./shared/ctx-period";
+import {CtxCoding} from "./shared/ctx-coding";
 
 export type ApprovalStatus = 'approved' | 'denied' | 'pending' | 'unnecessary'
 
@@ -50,7 +50,7 @@ export interface CtxEncounter extends CtxResource {
   diagnosis?: {
     condition: string,
     rank?: number,
-    use?: CodeableConcept
+    use?: CtxCoding[]
   };
   subjectId: string; // ID of the patient subject
 

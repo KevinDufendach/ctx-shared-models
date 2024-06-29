@@ -1,5 +1,3 @@
-import {Extension} from "fhir/r4";
-
 export type CtxResourceType = (
   'patient' |
   'encounter' |
@@ -25,7 +23,6 @@ export interface CtxResource {
    */
   // version: number
   identifier?: string
-  extension?: Extension[]
   data?: any
   // data?: {[key in string]: any}
 }
