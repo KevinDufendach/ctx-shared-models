@@ -1,6 +1,5 @@
 import {CtxResource} from "./ctx-resource";
-import {CtxPeriod} from "./shared/ctx-period";
-import {CtxCoding} from "./shared/ctx-coding";
+import {CtxCoding, CtxPeriod} from "./shared";
 
 export type ApprovalStatus = 'approved' | 'denied' | 'pending' | 'unnecessary'
 

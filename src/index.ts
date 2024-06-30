@@ -15,5 +15,4 @@ export * from "./ctx-procedure";
 export * from "./room-assignment";
 
 export * from "./unit-data";
-export * from './util'
 export * from './shared'
